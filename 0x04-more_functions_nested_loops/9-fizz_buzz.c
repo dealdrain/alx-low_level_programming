@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * main- main program that prints the numbers from 0 to 100
- * Desc: multiples of 3 and 5 print Fizz Buzz respectively
- * multiples of both 3 and 5 prints FizzBuzz
- * return: 0
+ * main - main block, prints fizz buzz and numbers from 1 to 100
+ * Description: Multiples of 3 gets Fizz. multiples of 5 must print Buzz.
+ * Multiples of both 3 and 5 should print FizzBuzz.
+ * Return: 0
  */
 
 int main(void)
