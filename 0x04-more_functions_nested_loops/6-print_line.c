@@ -8,7 +8,7 @@
 
 void print_line(int n)
 {
-	int c;
+	int x;
 
 	x = 0;
 	while (x < n)
