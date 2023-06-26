@@ -3,7 +3,7 @@
 /**
   * _puts - Prints a string to stdout
   * @str: The string to print
-  * Desc: another putchar
+  * Desc: another _putchar
   * Return: void
   */
 
