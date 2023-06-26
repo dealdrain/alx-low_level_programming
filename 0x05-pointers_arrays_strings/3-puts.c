@@ -1,19 +1,20 @@
 #include "main.h"
 
-/*
- * _puts - printing a string to stdout
- * @str: char array string
- *
- * Desc: Another _putchar baby
- */
+/**
+  * _puts - Prints a string to stdout
+  * @str: The string to print
+  * Desc: another putchar
+  * Return: void
+  */
 
 void _puts(char *str)
-{
-	int x;
 
-	for (x = 0; str[x] != '\0'; x++)
+{
+	for (; *str != '\0'; str++)
 	{
-		_putchar(str[x]);
+		_putchar(*str);
 	}
+
 	_putchar('\n');
 }
+
