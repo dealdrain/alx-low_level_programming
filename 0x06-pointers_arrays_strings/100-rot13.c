@@ -2,24 +2,29 @@
 
 /**
  * rot13 - rotate characters..
- * @s: string
+ * @j: input string
  * Desc: You can only use two loops in your code
  * Return: rotated string.
  */
 
-char *rot13(char *s)
+char *rot13(char *j)
 {
-	int x;
-	char pile[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char pile2[] = "nopqrstuvwxyzabcdefghijklm";
+	int x, y;
 
-	for (x = 0; s[x] != '\0'; x++)
+	char bk[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char bkk[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (x = 0; j[x] != '\0'; ++x)
 	{
-		if ((s[x] > 64 && s[x] < 91) || (s[x] > 96 && s[x] < 123))
+		for (y = 0; bk[y] != '\0' ; y++)
 		{
-			s[x] = (s[x] - 65 > 25) ?
-				pile2[s[x] - 97] : pile[s[x] - 65];
+			if (j[x] == bk[y])
+			{
+				j[x] = bkk[y];
+				break;
+			}
 		}
 	}
-	return (s);
+	j[x] = '\0';
+	return (j);
 }
