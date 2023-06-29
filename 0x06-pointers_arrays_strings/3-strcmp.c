@@ -6,7 +6,7 @@
  * @s1: string
  * @s2: string
  * Return: (0) if match, (-) if s1 < s2, (+) int if s2 > s2
- * */
+ **/
 
 int _strcmp(char *s1, char *s2)
 {
