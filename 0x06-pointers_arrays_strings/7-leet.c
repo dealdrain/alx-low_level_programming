@@ -6,21 +6,22 @@
  * Return: string `s`
  */
 
+
 char *leet(char *s)
 {
 	int x;
 
 	for (x = 0; s[x] != '\0'; x++)
 	{
-		while (s[x] == 'a' || s[x] == 'A')
+		if (s[x] == 'a' || s[x] == 'A')
 			s[x] = '4';
-		while (s[x] == 'e' || s[x] == 'E')
+		if (s[x] == 'e' || s[x] == 'E')
 			s[x] = '3';
-		while (s[x] == 'o' || s[x] == 'O')
+		if (s[x] == 'o' || s[x] == 'O')
 			s[x] = '0';
-		while (s[x] == 't' || s[x] == 'T')
+		if (s[x] == 't' || s[x] == 'T')
 			s[x] = '7';
-		while (s[x] == 'l' || s[x] == 'L')
+		if (s[x] == 'l' || s[x] == 'L')
 			s[x] = '1';
 	}
 
