@@ -12,28 +12,19 @@
 char *_strstr(char *haystack, char *needle)
 
 {
-	int a = 0;
-	int b = 0;
-	int ef = 0;
-	int ed = 0;
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *a = haystack;
+		char *b = needle;
 
-	while (needle[ef] != '\0')
-	{
-		ef++;
-	}
-	for (a = 0; haystack[a] != '\0'; a++)
-	{
-		for (b = 0; b < ef && haystack[a] == needle[b]; b++, a++)
+		while (*a == *b && *b != '\0')
 		{
-			if (b == 0)
-			{
-				ed = a;
-			}
-			if (b == ef - 1)
-			{
-				return (haystack + ed);
-			}
+			a++;
+			b++;
 		}
+
+		if (*b == '\0')
+			return (haystack);
 	}
 	return (0);
 }
