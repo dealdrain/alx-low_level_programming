@@ -8,21 +8,21 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list arg;
+	va_list args;
 	unsigned int a = 0;
 	int total = 0;
 
 	if (n != 0)
 	{
-		va_start(arg, n);
+		va_start(args, n);
 
 		while (a < n)
 		{
-			total += va_arg(arg, int);
+			total += va_arg(args, int);
 			a++;
 		}
 
-		va_end(arg);
+		va_end(args);
 		return (total);
 	}
 
