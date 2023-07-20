@@ -14,9 +14,16 @@ void priflo(va_list z);
 void pristr(va_list z);
 int _putchar(char c);
 
+/**
+ * struct checker - Struct format_types
+ * @f: function
+ * @type: type
+ */
+
 typedef struct checker
 {
 char *type;
 void (*f)();
 } checker;
+
 #endif
