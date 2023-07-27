@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
+
 
 /**
  * print_list - print all elements of `list_t` list
@@ -7,19 +7,23 @@
  * Return: no. of nodes
  */
 
+
 size_t print_list(const list_t *h)
 {
-	const list_t *now;
-	size_t n = 0;
+	size_t no;
 
-	now = h;
+	no = 0;
 
-	while (now != NULL)
+	while (h != NULL)
 	{
-		printf("[%d] %s\n", now->len, now->str);
-		now = now->next;
-		n++;
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", h->len, h->str);
+
+		h = h->next;
+		no++;
 	}
 
-	return (n);
+	return (no);
 }
