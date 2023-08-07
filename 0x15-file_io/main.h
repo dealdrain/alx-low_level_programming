@@ -1,5 +1,5 @@
-#ifndef FILE_I/O_H
-#define FILE_I/O_H
+#ifndef FILE_IO_H
+#define FILE_IO_H
 
 #include <unistd.h>
 #include <stdio.h>
